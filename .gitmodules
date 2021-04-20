@@ -1,0 +1,3 @@
+[submodule "src/main/react-submodule"]
+	path = src/main/react-submodule
+	url = https://github.com/Ryoto-Noguchi/react-submodule.git
