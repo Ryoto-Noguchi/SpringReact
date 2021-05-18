@@ -17,7 +17,7 @@ public class QuestionService {
   public List<Question> getAllQuestions() {
     List<Question> test = questionRepository.findAll();
     for (Question question : test) {
-      System.out.println(question);
+      System.out.println("選択肢A: " + question.getChoices().get("A"));
     }
     return test;
   }
