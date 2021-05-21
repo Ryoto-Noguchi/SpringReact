@@ -1,7 +1,7 @@
 CREATE DATABASE IF NOT EXISTS quiz ;
 SELECT * FROM questions;
 
-ALTER TABLE questions MODIFY
+UPDATE questions SET question = 'Who was the former Prime Minister of Japan ?' WhERE id = 2;uj
 
 CREATE TABLE questions (
   id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
