@@ -9,8 +9,10 @@ CREATE TABLE questions (
 
 CREATE TABLE respondents (
   id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  fullName VARCHAR(255) NOT NULL,
+  full_name VARCHAR(255) NOT NULL,
   time time(2) NOT NULL
 )
 
 DROP TABLE respondents;
+
+RENAME TABLE respondents TO responses;

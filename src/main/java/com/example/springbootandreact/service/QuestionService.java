@@ -15,11 +15,11 @@ public class QuestionService {
   private QuestionRepository questionRepository;
 
   public List<Question> getAllQuestions() {
-    List<Question> test = questionRepository.findAll();
-    for (Question question : test) {
+    List<Question> questionList = questionRepository.findAll();
+    for (Question question : questionList) {
       System.out.println("選択肢A: " + question.getChoices().get("A"));
     }
-    return test;
+    return questionList;
   }
 
 
