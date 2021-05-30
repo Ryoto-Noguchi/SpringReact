@@ -22,5 +22,9 @@ public class QuestionService {
     return questionList;
   }
 
+  public Question createQuestion(Question question) {
+    return questionRepository.save(question);
+  }
+
 
 }
