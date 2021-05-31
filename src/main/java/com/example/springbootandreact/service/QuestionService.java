@@ -15,11 +15,7 @@ public class QuestionService {
   private QuestionRepository questionRepository;
 
   public List<Question> getAllQuestions() {
-    List<Question> questionList = questionRepository.findAll();
-    for (Question question : questionList) {
-      System.out.println("選択肢A: " + question.getChoices().get("A"));
-    }
-    return questionList;
+    return questionRepository.findAll();
   }
 
   public Question createQuestion(Question question) {
