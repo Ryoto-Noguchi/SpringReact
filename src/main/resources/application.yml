@@ -4,7 +4,20 @@ spring:
         url: jdbc:mysql://localhost:3306/quiz
         username: root
         password:
-    #jpa:
-        #hibernate:
-            #show-sql: true
-            #ddl-auto: create-drop
+    jpa:
+        show-sql: true
+        # hibernate:
+            #ddl-auto: none
+    jackson:
+        serialization:
+            INDENT_OUTPUT: true
+
+logging:
+    level:
+        org:
+            hibernate:
+                SQL: DEBUG
+                type:
+                    descriptor:
+                        sql:
+                            BasicBinder: TRACE

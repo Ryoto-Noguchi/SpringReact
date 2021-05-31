@@ -7,12 +7,12 @@ CREATE TABLE questions (
   answer CHAR(1) NOT NULL
 )
 
-CREATE TABLE respondents (
+CREATE TABLE responses (
   id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
   full_name VARCHAR(255) NOT NULL,
   time time(2) NOT NULL
 )
 
-DROP TABLE respondents;
+DROP TABLE responses;
 
-RENAME TABLE respondents TO responses;
+RENAME TABLE responses TO responses;
