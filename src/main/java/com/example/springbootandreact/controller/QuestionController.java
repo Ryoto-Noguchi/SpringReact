@@ -7,7 +7,9 @@ import com.example.springbootandreact.service.QuestionService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,5 +30,15 @@ public class QuestionController {
   @PostMapping("/questions")
   public Question createQuestion(@RequestBody Question question) {
     return questionService.createQuestion(question);
+  }
+
+  @DeleteMapping("/questions/delete/{id}")
+  public boolean deleteQuestion(@PathVariable int id) {
+    boolean isDeleted = false;
+    int result = questionService.deleteById(id);
+    if (result > 0) {
+      isDeleted = true;
+    }
+    return isDeleted;
   }
 }

@@ -22,5 +22,14 @@ public class QuestionService {
     return questionRepository.save(question);
   }
 
+  public int deleteById(int id) {
+    try {
+      questionRepository.deleteById(id);
+      return 1;
+    } catch (Exception e) {
+      e.printStackTrace();
+      return 0;
+    }
+  }
 
 }
